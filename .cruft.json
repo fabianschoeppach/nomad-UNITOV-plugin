@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+  "commit": "e759475d3f8905df4354ca83d8ce6cd632ffce99",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Fabian Schöppach",
+      "email": "fabian.schoeppach@physik.hu-berlin.de",
+      "github_username": "fabianschoeppach",
+      "plugin_name": "nomad-UNITOV-plugin",
+      "module_name": "nomad_unitov_plugin",
+      "short_description": "UNITOV schema and parser collection for the NOMAD platform.",
+      "version": "0.1.0",
+      "license": "Apache Software License 2.0",
+      "include_schema_package": true,
+      "include_normalizer": true,
+      "include_parser": true,
+      "include_app": false,
+      "include_example_uploads": false,
+      "_copy_without_render": [
+        "*.html"
+      ],
+      "_template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin"
+    }
+  },
+  "directory": null
+}
