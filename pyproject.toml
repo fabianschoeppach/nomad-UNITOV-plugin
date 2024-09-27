@@ -77,7 +77,7 @@ select = [
     "UP",
     # isort
     "I",
-    # pylint 
+    # pylint
     "PL",
 ]
 
@@ -113,7 +113,6 @@ where = ["src"]
 [project.entry-points.'nomad.plugin']
 parser_entry_point = "nomad_unitov_plugin.parsers:parser_entry_point"
 schema_package_entry_point = "nomad_unitov_plugin.schema_packages:schema_package_entry_point"
-normalizer_entry_point = "nomad_unitov_plugin.normalizers:normalizer_entry_point"
 
 
 [tool.cruft]
