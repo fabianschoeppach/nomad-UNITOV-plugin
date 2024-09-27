@@ -113,6 +113,7 @@ where = ["src"]
 [project.entry-points.'nomad.plugin']
 parser_entry_point = "nomad_unitov_plugin.parsers:parser_entry_point"
 schema_package_entry_point = "nomad_unitov_plugin.schema_packages:schema_package_entry_point"
+solution_entry_point = "nomad_unitov_plugin.schema_packages:solution_entry_point"
 
 
 [tool.cruft]
