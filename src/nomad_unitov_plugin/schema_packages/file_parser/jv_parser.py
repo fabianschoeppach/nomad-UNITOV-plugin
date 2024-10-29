@@ -307,10 +307,7 @@ def get_jv_data_unitov(filedata):
 
 
 def get_jv_data(filedata):
-    if filedata.startswith("Keithley"):
-        return get_jv_data_hysprint(filedata), "HySprint HyVap"
-    else:
-        return get_jv_data_iris(filedata), 'IRIS HZBGloveBoxes Pero4SOSIMStorage'
+    return get_jv_data_unitov(filedata), "Untiov"
 
 #import os;
 #abs_path = os.path.dirname(os.path.abspath(__file__))+'\\';

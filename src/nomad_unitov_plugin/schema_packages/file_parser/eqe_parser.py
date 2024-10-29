@@ -56,12 +56,10 @@ def arrange_eqe_columns(df):
         photon_energy_raw: array of photon energy values in eV
         eqe_raw: array of eqe values
     """
-    if 'Calculated' in list(df.columns):  # for files from the hzb
-        x = df.iloc[:, 0].values
-        y = df['Calculated'].values
-    else:
-        x = df.iloc[:, 0].values
-        y = df.iloc[:, 1].values
+                  
+    x = np.array(df['Wavelength (nm)']) # for files from the unitov
+    y = np.array(df['IPCE (%)'])
+
 
     if any(x > 10):  # check if energy (eV) or wavelength (nm)
         x = hc_eVnm / x
@@ -114,6 +112,8 @@ def read_file(file_path, header_lines=None):
                     df = pd.read_csv(file_path, header=int(header_lines))
                     if len(df.columns) < 2:
                         raise IndexError
+    #print(df)
+                    
     df = df.apply(pd.to_numeric, errors='coerce')
     df = df.dropna()
     photon_energy_raw, eqe_raw = arrange_eqe_columns(df)
@@ -122,6 +122,8 @@ def read_file(file_path, header_lines=None):
 
 
 def read_file_multiple(filedata):
+
+    raise NotImplementedError;
     df = pd.read_csv(StringIO(filedata), sep="\t")
     result = []
     for i in range(0, len(df.columns), 6):
@@ -151,3 +153,9 @@ def read_file_multiple(filedata):
         except:
             continue
     return result
+
+
+import os;
+abs_path = os.path.dirname(os.path.abspath(__file__))+'\\';
+print(read_file(abs_path+r"..\..\..\..\tests\data\example_measurement\EQE.txt", header_lines=24)[3]);
+#print(get_jv_data_unitov(file.read()))
