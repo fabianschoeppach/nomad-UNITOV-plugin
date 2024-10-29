@@ -1,30 +1,14 @@
 from nomad.config.models.plugins import SchemaPackageEntryPoint
-from pydantic import Field
 
 
-class NewSchemaPackageEntryPoint(SchemaPackageEntryPoint):
-    parameter: int = Field(0, description='Custom configuration parameter')
+class HySprintPackageEntryPoint(SchemaPackageEntryPoint):
 
     def load(self):
-        from nomad_unitov_plugin.schema_packages.schema_package import m_package
-
+        from nomad_hysprint.schema_packages.hysprint_package import m_package
         return m_package
 
 
-schema_package_entry_point = NewSchemaPackageEntryPoint(
-    name='NewSchemaPackage',
-    description='New schema package entry point configuration.',
-)
-
-
-class UNITOVSolitionEntryPoint(SchemaPackageEntryPoint):
-    def load(self):
-        from nomad_unitov_plugin.schema_packages.solution import m_package
-
-        return m_package
-
-
-solution_entry_point = UNITOVSolitionEntryPoint(
-    name='UNITOV Solution',
-    description='Schema package for UNITOV solution.',
+hysprint_package = HySprintPackageEntryPoint(
+    name='HySprint',
+    description='Package for HZB HySprint Lab',
 )

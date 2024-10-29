@@ -1,0 +1,46 @@
+## Header ##		
+# General info		
+User	LHMJ	
+Device	3C_C1_1	
+Test	Stability (Parameters)	
+Date	2023-10-19	
+Time	18:33:10	
+Note		
+Channel	1A	
+		
+# JV settings		
+Vmin (V)	-0.100	
+Vmax (V)	1.300	
+Auto-detect Voc	Yes	
+Scan direction	FW->RV	
+Voltage Range (V)	10V	
+Current Range (V)	250mA (H)	
+Tipology	Cell	
+Cell Area (cm2)	0.50	
+#Cells	1.00	
+W cell area (cm2)	1.00	
+#W cells	1.00	
+Inverted	No	
+Auto-range	On	
+	Off	
+	10	
+	10	
+		
+# Global JV settings		
+Voltage Step (mV)	20.000	
+Scan Rate (mV/s)	200.000	
+		
+# Tracking settings		
+Algorithm	MPPT	
+dV track (V)	0.02	
+track delay (s)	2.00	
+JV interval (min)	0.20	
+Test duration (min)	100.00	
+Start-up Time	18:33:10 19/10/2023	
+		
+		
+## Data ##		
+Time (Hours)	Voc (V) FW	Jsc (mA/cm2) FW	V_MPP (V) FW	J_MPP (mA/cm2) FW	P_MPP (mW/cm2) FW	Rs (Ohm) FW	R// (Ohm) FW	Fill Factor (%) FW	Efficiency (%) FW	Voc (V) RV	Jsc (mA/cm2) RV	V_MPP (V) RV	J_MPP (mA/cm2) RV	P_MPP (mW/cm2) RV	Rs (Ohm) RV	R// (Ohm) RV	Fill Factor (%) RV	Efficiency (%) RV
+4.133888E-3	7.879927E-1	1.722474E+1	5.599995E-1	1.254105E+1	7.022985E+0	2.491774E+1	3.347932E+2	5.174244E+1	7.022985E+0	7.941096E-1	1.731527E+1	5.999994E-1	1.269309E+1	7.615843E+0	2.147150E+1	4.878823E+2	5.538706E+1	7.615843E+0
+1.153972E-2	8.154106E-1	1.738086E+1	5.799998E-1	1.234301E+1	7.158944E+0	2.688641E+1	2.563102E+2	5.051278E+1	7.158944E+0	8.191284E-1	1.738769E+1	5.999994E-1	1.269531E+1	7.617180E+0	2.405753E+1	2.986669E+2	5.348110E+1	7.617180E+0
+1.903167E-2	8.281511E-1	1.747813E+1	5.800004E-1	1.208987E+1	7.012132E+0	2.697045E+1	3.541816E+2	4.844462E+1	7.012132E+0	8.331353E-1	1.732886E+1	5.999994E-1	1.229683E+1	7.378088E+0	2.508763E+1	2.603355E+2	5.110441E+1	7.378088E+0

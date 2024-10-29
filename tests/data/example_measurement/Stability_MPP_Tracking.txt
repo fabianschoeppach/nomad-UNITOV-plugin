@@ -1,0 +1,50 @@
+## Header ##		
+# General info		
+User	LHMJ	
+Device	3C_C1_1	
+Test	Stability (Tracking)	
+Date	2023-10-19	
+Time	18:33:10	
+Note		
+Channel	1A	
+		
+# JV settings		
+Vmin (V)	-0.100	
+Vmax (V)	1.300	
+Auto-detect Voc	Yes	
+Scan direction	FW->RV	
+Voltage Range (V)	10V	
+Current Range (V)	250mA (H)	
+Tipology	Cell	
+Cell Area (cm2)	0.50	
+#Cells	1.00	
+W cell area (cm2)	1.00	
+#W cells	1.00	
+Inverted	No	
+Auto-range	On	
+	Off	
+	10	
+	10	
+		
+# Global JV settings		
+Voltage Step (mV)	20.000	
+Scan Rate (mV/s)	200.000	
+		
+# Tracking settings		
+Algorithm	MPPT	
+dV track (V)	0.02	
+track delay (s)	2.00	
+JV interval (min)	0.20	
+Test duration (min)	100.00	
+Start-up Time	18:33:10 19/10/2023	
+		
+		
+## Data ##		
+Time (hours)	V (V)	J (mAcm-2)	P (mWcm-2)
+0.007159	0.620001	10.712124	6.641527
+0.007861	0.600000	12.214694	7.328817
+0.008565	0.579999	12.772795	7.408210
+0.014586	0.620000	10.764449	6.673962
+0.015289	0.599999	12.170641	7.302377
+0.015997	0.579999	12.607951	7.312601
+0.022142	0.620000	10.296297	6.383707
