@@ -19,7 +19,7 @@
 from nomad.datamodel import EntryArchive
 from nomad.parsing import MatchingParser
 
-from nomad_hysprint.schema_packages.hysprint_package import (
+from nomad_unitov_plugin.schema_packages.hysprint_package import (
     HySprint_JVmeasurement,
     HySprint_TimeResolvedPhotoluminescence,
     HySprint_EQEmeasurement,

@@ -114,7 +114,7 @@ where = ["src"]
 parser_entry_point = "nomad_unitov_plugin.parsers:parser_entry_point"
 schema_package_entry_point = "nomad_unitov_plugin.schema_packages:schema_package_entry_point"
 solution_entry_point = "nomad_unitov_plugin.schema_packages:solution_entry_point"
-
+#because not defined in hysprint
 
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues

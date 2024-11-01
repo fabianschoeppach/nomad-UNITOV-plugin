@@ -4,14 +4,14 @@ from nomad.config.models.plugins import ParserEntryPoint
 class HySprintParserEntryPoint(ParserEntryPoint):
 
     def load(self):
-        from nomad_hysprint.parsers.hysprint_parser import HySprintParser
+        from nomad_unitov_plugin.parsers.hysprint_parser import HySprintParser
         return HySprintParser(**self.dict())
 
 
 class HySprintExperimentParserEntryPoint(ParserEntryPoint):
 
     def load(self):
-        from nomad_hysprint.parsers.hysprint_batch_parser import HySprintExperimentParser
+        from nomad_unitov_plugin.parsers.hysprint_batch_parser import HySprintExperimentParser
         return HySprintExperimentParser(**self.dict())
 
 
@@ -22,6 +22,7 @@ hysprint_parser = HySprintParserEntryPoint(
     mainfile_mime_re='(application|text|image)/.*'
 )
 
+parser_entry_point  = hysprint_parser; #Added to address AttributeError: module 'nomad_unitov_plugin.parsers' has no attribute 'parser_entry_point'. Did you mean: 'ParserEntryPoint'?
 
 hysprint_experiment_parser = HySprintExperimentParserEntryPoint(
     name='HySprintBatchParser',

@@ -155,7 +155,7 @@ def read_file_multiple(filedata):
     return result
 
 
-import os;
-abs_path = os.path.dirname(os.path.abspath(__file__))+'\\';
-print(read_file(abs_path+r"..\..\..\..\tests\data\example_measurement\EQE.txt", header_lines=24)[3]);
+#import os;
+#abs_path = os.path.dirname(os.path.abspath(__file__))+'\\';
+#print(read_file(abs_path+r"..\..\..\..\tests\data\example_measurement\EQE.txt", header_lines=24)[3]);
 #print(get_jv_data_unitov(file.read()))

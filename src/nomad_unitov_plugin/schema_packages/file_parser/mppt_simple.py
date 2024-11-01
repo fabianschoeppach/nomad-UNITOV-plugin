@@ -54,10 +54,10 @@ def read_mppt_file(filedata):
 
     return mppt_dict
 
-import os,io;
-abs_path = os.path.dirname(os.path.abspath(__file__))+'\\';
-file = io.open(abs_path+r"..\..\..\..\tests\data\example_measurement\001_Tracking.txt", "r",encoding='windows-1252') 
-print(read_mppt_file(file.read()))
+#import os,io;
+#abs_path = os.path.dirname(os.path.abspath(__file__))+'\\';
+#file = io.open(abs_path+r"..\..\..\..\tests\data\example_measurement\001_Tracking.txt", "r",encoding='windows-1252') 
+#print(read_mppt_file(file.read()))
 
 
 # file = "/home/a2853/Documents/Projects/nomad/hysprintlab/mppt/0a4d713aea22a9edaf1ac8b98fd5e44e.20211129_ re_02-2.mppt.txt"
