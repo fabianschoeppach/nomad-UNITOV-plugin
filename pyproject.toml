@@ -26,6 +26,7 @@ maintainers = [
 ]
 license = { file = "LICENSE" }
 dependencies = [
+    "nomad-baseclasses",
     "nomad-lab>=1.3.0",
     "python-magic-bin; sys_platform == 'win32'",
 ]
@@ -119,3 +120,6 @@ solution_entry_point = "nomad_unitov_plugin.schema_packages:solution_entry_point
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
 skip = [".github/*"]
+
+[tool.uv.sources]
+nomad-baseclasses = { workspace = true }

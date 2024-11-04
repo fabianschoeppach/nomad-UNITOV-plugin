@@ -19,16 +19,16 @@
 from nomad.datamodel import EntryArchive
 from nomad.parsing import MatchingParser
 
-from nomad_unitov_plugin.schema_packages.hysprint_package import (
-    HySprint_JVmeasurement,
+from nomad_unitov_plugin.schema_packages.unitov_package import (
+    Unitov_JVmeasurement,
     HySprint_TimeResolvedPhotoluminescence,
-    HySprint_EQEmeasurement,
+    Unitov_EQEmeasurement,
     HySprint_PLmeasurement, HySprint_PLImaging,
     HySprint_Measurement,
     HySprint_UVvismeasurement,
     HySprint_trSPVmeasurement,
     HZB_EnvironmentMeasurement,
-    HZB_NKData, HySprint_SEM, HySprint_XRD_XY, HySprint_SimpleMPPTracking
+    HZB_NKData, HySprint_SEM, HySprint_XRD_XY, Unitov_SimpleMPPTracking
 )
 
 
@@ -75,11 +75,11 @@ class HySprintParser(MatchingParser):
         measurment_type = mainfile_split[-2].lower()
         entry = HySprint_Measurement()
         if mainfile_split[-1] == "txt" and measurment_type == "jv":
-            entry = HySprint_JVmeasurement()
+            entry = Unitov_JVmeasurement()
         if mainfile_split[-1] == "txt" and measurment_type == "spv":
             entry = HySprint_trSPVmeasurement()
         if mainfile_split[-1] == "txt" and measurment_type == "eqe":
-            entry = HySprint_EQEmeasurement()
+            entry = Unitov_EQEmeasurement()
         if mainfile_split[-1] in ["tif", "tiff"] and measurment_type.lower() == "sem":
             entry = HySprint_SEM()
             entry.detector_data = [os.path.basename(mainfile)]
@@ -97,7 +97,7 @@ class HySprintParser(MatchingParser):
         if mainfile_split[-1] in ["nk"]:
             entry = HZB_NKData()
         if mainfile_split[-1] in ["txt"] and measurment_type == "mppt":
-            entry = HySprint_SimpleMPPTracking()
+            entry = Unitov_SimpleMPPTracking()
         archive.metadata.entry_name = os.path.basename(mainfile)
 
         if not mainfile_split[-1] in ["nk"]:
