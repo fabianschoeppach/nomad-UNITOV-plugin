@@ -1485,24 +1485,24 @@ class Unitov_EQEmeasurement(EQEMeasurement, EntryData):
 #         a_browser=dict(adaptor='RawFileAdaptor'))
 
 
-# class HySprint_Measurement(BaseMeasurement, EntryData):
-#     m_def = Section(
-#         a_eln=dict(
-#             hide=[
-#                 'lab_id',
-#                 'users',
-#                 'location',
-#                 'end_time', 'steps', 'instruments', 'results'],
-#             properties=dict(
-#                 order=[
-#                     "name",
-#                     "data_file",
-#                     "samples", "solution"])))
+class Unitov_Measurement(BaseMeasurement, EntryData):
+    m_def = Section(
+        a_eln=dict(
+            hide=[
+                'lab_id',
+                'users',
+                'location',
+                'end_time', 'steps', 'instruments', 'results'],
+            properties=dict(
+                order=[
+                    "name",
+                    "data_file",
+                    "samples", "solution"])))
 
-#     data_file = Quantity(
-#         type=str,
-#         a_eln=dict(component='FileEditQuantity'),
-#         a_browser=dict(adaptor='RawFileAdaptor'))
+    data_file = Quantity(
+        type=str,
+        a_eln=dict(component='FileEditQuantity'),
+        a_browser=dict(adaptor='RawFileAdaptor'))
 
 
-# m_package.__init_metainfo__()
+m_package.__init_metainfo__()
